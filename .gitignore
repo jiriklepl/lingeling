@@ -1,8 +1,12 @@
 *.o
 *.a
+ilingeling
 lglcfg.h
 lglcflags.h
+lglddtrace
+lgluntrace
 lglmbt
 lingeling
 makefile
 plingeling
+treengeling
