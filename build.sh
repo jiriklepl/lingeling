@@ -2,7 +2,7 @@
 
 [ -f "makefile" ] && make clean
 INCLUDES=`ls *.h`
-./configure.sh $@-O3 -march=native && make
+./configure.sh $@ && make
 
 BIN="usr/bin"
 LIB="usr/lib"
