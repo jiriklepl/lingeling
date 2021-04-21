@@ -11,5 +11,5 @@ makefile
 plingeling
 treengeling
 
-/usr
+/lingeling-bcp/usr
 /*.deb

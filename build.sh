@@ -4,18 +4,19 @@
 INCLUDES=`ls *.h`
 ./configure.sh $@ && make
 
-BIN="usr/bin"
-LIB="usr/lib"
-LGL="usr/include/lgl"
+ROOT="lingeling-bcp"
 
-rm -r "usr"
+BIN="$ROOT/usr/bin"
+LIB="$ROOT/usr/lib"
+LINGELING="$ROOT/usr/include/lingeling"
+
+rm -r "$ROOT/usr"
 mkdir -p $BIN
 mkdir -p $LIB
-mkdir -p $LGL
+mkdir -p $LINGELING
 
 mv liblgl.a $LIB
 sed -n "/^targets:/{/\\.a/d;/targets:\\s*$/d;s/targets:\\s*//;p}" makefile \
 	| tr ' ' '\n' | xargs mv -t $BIN
-cp -t $LGL $INCLUDES
-dpkg-deb --build --root-owner-group .
-mv ..deb lingeling-1.0.0-1.deb
+cp -t $LINGELING $INCLUDES
+dpkg-deb --build --root-owner-group "lingeling-bcp"
