@@ -23,7 +23,7 @@ Or, to build with optimizations:
 To install, after building, issue:
 
 ```sh
-sudo dpkg -i lingeling-1.0.0-1.deb
+sudo dpkg -i lingeling-bcp.deb
 ```
 
 ## Copyright
